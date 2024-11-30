@@ -1,0 +1,148 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../public/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.notes-app {
+  max-width: 1400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.notes-header {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.note-input-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.note-input-form input {
+  width: 500px;
+  padding: 12px 15px;
+  border: 2px solid #e3a65f;
+  border-radius: 25px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.note-input-form input:focus {
+  outline: none;
+  border-color: #e3a65f;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.note-input-form button {
+  background-color: #e3a65f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-input-form button:hover {
+  background-color: #bf7621;
+  transform: translateY(-2px);
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.note-card {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.note-card:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.note-card p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-date {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.delete-note {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.delete-note:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
